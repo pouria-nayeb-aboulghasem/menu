@@ -254,19 +254,19 @@ body {
     .menu__row--sm {
         position:fixed;
         top: 0;
-        left: -100%;
+        right: -100%;
         bottom:0;
         overflow-y:auto;
         overflow-x:hidden;
         display: grid;
         grid-template-columns: 1fr;
         width: 100%;
-        transition: left 0.4s;
+        transition: right 0.4s;
         z-index: 100%;
     }
 
     .menu__row--sm.active {
-        left: 0;
+        right: 0;
     }
 
     .menu__col {
@@ -277,56 +277,31 @@ body {
 
     .menu__col--1 {
         background-position-y: 26%;
-        top: initial;
-        left: -100%;
-        transition: left 0.4s;
-    }
-    
-    .menu__row--sm.active .menu__col--1 {
+        top: 0;
         left: 0;
     }
 
     .menu__col--2 {
         background-position-y: 40%;
         top: 0;
-        left: -100%;
-        transition: left 0.4s;
-    }
-    
-    .menu__row--sm.active .menu__col--2 {
         left: 0;
     }
 
     .menu__col--3 {
         background-position-y: 33%;
         top: 0;
-        left: -100%;
-        transition: left 0.4s;
-    }
-
-    .menu__row--sm.active .menu__col--3 {
         left: 0;
     }
 
     .menu__col--4 {
         background-position-y: 30%;
         top: 0;
-        left: -100%;
-        transition: left 0.4s;
-    }
-
-    .menu__row--sm.active .menu__col--4 {
         left: 0;
     }
 
     .menu__col--5 {
         background-position-y: 25%;
         top: 0;
-        left: -100%;
-        transition: left 0.4s;
-    }
-
-    .menu__row--sm.active .menu__col--5 {
         left: 0;
     }
 
