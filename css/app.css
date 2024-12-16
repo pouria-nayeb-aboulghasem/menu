@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --yellow-color: #ffff00;
+    --ff-poppins: "Poppins", serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-poppins);
+    color: var(--white-color);
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    background-color: var(--black-color);
+    color: white;
+}
+
+.header {
+    padding-inline: 1.5rem;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu__row--lg {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    transition: top 1s;
+}
+
+.menu__row--lg.active {
+    top: 0;
+}
+
+.menu__container {
+    height: 100%;
+}
+
+.menu__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5.5rem;
+}
+
+.menu__toggle {
+    font-size: 2rem;
+    position: relative;
+    z-index: 1000;
+}
+
+.menu__row--lg {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+}
+
+.menu__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.menu__link {
+    color: var(--white-color);
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.25rem;
+    transition: color 0.4s, transform 0.4s;
+}
+
+.menu__link:hover {
+    color: var(--yellow-color);
+    transform: translateX(0.25rem);
+}
+
+.menu__col {
+    background-size: cover;
+    padding-inline:1rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    height: 100vh;
+    color: var(--white-color);
+    border-left: 3px solid rgba(0, 0, 0, 0.75);
+}
+
+.menu__data h5 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.menu__data h5::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 3px;
+    background-color: var(--white-color);
+}
+
+.menu__data {
+    height: 360px;
+}
+
+.menu__col--1 {
+    position: relative;
+    top: -100%;
+    background-image: url(../imgs/menu-1.jpg);
+    background-position: center;
+    z-index: 10;
+    transition: top 0.4s;
+    transition-delay: 0.1s;
+}
+
+.menu__row--lg.active .menu__col--1 {
+    top: 0;
+}
+
+.menu__col--1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.menu__col--2 {
+    position: relative;
+    top: -100%;
+    background-image: url(../imgs/menu-2.jpg);
+    z-index: 10;
+    transition: top 0.4s;
+    transition-delay: 0.2s;
+}
+
+.menu__row--lg.active .menu__col--2 {
+    top: 0;
+}
+
+.menu__col--2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.menu__col--3 {
+    position: relative;
+    top: -100%;
+    background-image: url(../imgs/menu-3.jpg);
+    z-index: 10;
+    transition: top 0.4s;
+    transition-delay: 0.3s;
+}
+
+.menu__row--lg.active .menu__col--3 {
+    top: 0;
+}
+
+.menu__col--3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.menu__col--4 {
+    position: relative;
+    top: -100%;
+    background-image: url(../imgs/menu-4.jpg);
+    z-index: 10;
+    transition: top 0.4s;
+    transition-delay: 0.4s;
+}
+
+.menu__row--lg.active .menu__col--4 {
+    top: 0;
+}
+
+.menu__col--4::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.menu__col--5 {
+    position: relative;
+    top: -100%;
+    background-image: url(../imgs/menu-5.jpg);
+    z-index: 10;
+    transition: top 0.4s;
+    transition-delay: 0.5s;
+}
+
+.menu__row--lg.active .menu__col--5 {
+    top: 0;
+}
+
+.menu__col--5::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.menu__row--sm {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .menu__content {
+        height: 3.5rem;
+    }
+
+    .menu__row--lg {
+        display: none;
+    }
+
+    .menu__row--sm {
+        position:fixed;
+        top: 0;
+        left: -100%;
+        bottom:0;
+        overflow-y:auto;
+        overflow-x:hidden;
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        transition: left 0.4s;
+        z-index: 100%;
+    }
+
+    .menu__row--sm.active {
+        left: 0;
+    }
+
+    .menu__col {
+        background-size: cover;
+        padding: 2rem 1rem;
+        height: auto;
+    }
+
+    .menu__col--1 {
+        background-position-y: 26%;
+        top: initial;
+        left: -100%;
+        transition: left 0.4s;
+    }
+    
+    .menu__row--sm.active .menu__col--1 {
+        left: 0;
+    }
+
+    .menu__col--2 {
+        background-position-y: 40%;
+        top: 0;
+        left: -100%;
+        transition: left 0.4s;
+    }
+    
+    .menu__row--sm.active .menu__col--2 {
+        left: 0;
+    }
+
+    .menu__col--3 {
+        background-position-y: 33%;
+        top: 0;
+        left: -100%;
+        transition: left 0.4s;
+    }
+
+    .menu__row--sm.active .menu__col--3 {
+        left: 0;
+    }
+
+    .menu__col--4 {
+        background-position-y: 30%;
+        top: 0;
+        left: -100%;
+        transition: left 0.4s;
+    }
+
+    .menu__row--sm.active .menu__col--4 {
+        left: 0;
+    }
+
+    .menu__col--5 {
+        background-position-y: 25%;
+        top: 0;
+        left: -100%;
+        transition: left 0.4s;
+    }
+
+    .menu__row--sm.active .menu__col--5 {
+        left: 0;
+    }
+
+    .menu__data {
+        height: 256px;
+    }
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+    background-color: hsl(230, 16%, 15%);
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: hsl(230, 16%, 25%);
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(230, 16%, 35%);
+}
